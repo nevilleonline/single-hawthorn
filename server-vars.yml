@@ -1,0 +1,68 @@
+---
+# Copyright (c) Microsoft Corporation. All Rights Reserved.
+# Licensed under the MIT license. See LICENSE file on the project webpage for details.
+
+# Sample Open edX on Azure configuration
+# see: https://github.com/edx/configuration/blob/master/playbooks/roles/edxapp/defaults/main.yml
+
+EDXAPP_PLATFORM_NAME: "Millicent"
+
+EDXAPP_TIME_ZONE: "Asia/Singapore"
+
+# Configure DNS name based on the ARM template parameter
+EDXAPP_SITE_NAME: "demo.millicenttechnologies.co.in"
+EDXAPP_LMS_SITE_NAME: "{{ EDXAPP_SITE_NAME }}"
+EDXAPP_CMS_SITE_NAME: "{{ EDXAPP_SITE_NAME }}"
+EDXAPP_LMS_BASE: "{{ EDXAPP_SITE_NAME }}"
+EDXAPP_CMS_BASE: "{{ EDXAPP_SITE_NAME }}:18010"
+EDXAPP_PREVIEW_LMS_BASE: "{{ EDXAPP_LMS_BASE }}"
+
+#AWS S3 Storage Settings
+EDXAPP_AWS_ACCESS_KEY_ID:  "AKIAJWJKRA5B7I2FGOLA"
+EDXAPP_AWS_SECRET_ACCESS_KEY:  "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"
+EDXAPP_AWS_STORAGE_BUCKET_NAME: "edxlithan"
+EDXAPP_FILE_UPLOAD_STORAGE_BUCKET_NAME: "{{ EDXAPP_AWS_STORAGE_BUCKET_NAME }}"
+EDXAPP_FILE_UPLOAD_STORAGE_PREFIX: "staging_attachments"
+EDXAPP_GRADE_BUCKET: "{{ EDXAPP_AWS_STORAGE_BUCKET_NAME }}"
+EDXAPP_GRADE_STORAGE_TYPE: "s3"
+EDXAPP_GRADE_ROOT_PATH: "staging_grades"
+
+# Configure third-party auth
+# see: http://edx.readthedocs.org/projects/edx-installing-configuring-and-running/en/latest/configuration/tpa/
+# see: https://github.com/MSOpenTech/edx-documentation/blob/master/en_us/install_operations/source/configuration/enable_sso.rst
+#EDXAPP_ENABLE_THIRD_PARY_AUTH: true
+#EDXAPP_ENABLE_OAUTH2_PROVIDER: true
+
+# Configure Open edX features
+# see: http://edx.readthedocs.org/projects/edx-installing-configuring-and-running/en/latest/feature_flags/feature_flag_index.html
+EDXAPP_FEATURES:
+  #ENABLE_THIRD_PARTY_AUTH: "{{ EDXAPP_ENABLE_THIRD_PARTY_AUTH }}"
+  #ENABLE_OAUTH2_PROVIDER: "{{ EDXAPP_ENABLE_OAUTH2_PROVIDER }}"
+  #ENABLE_SYSADMIN_DASHBOARD: true
+  #ENABLE_INSTRUCTOR_EMAIL: true
+  #REQUIRE_COURSE_EMAIL_AUTH: true
+  ENABLE_MOBILE_REST_API: true
+  ENABLE_OAUTH2_PROVIDER: true
+  ENABLE_COMBINED_LOGIN_REGISTRATION: true
+  #ENABLE_LTI_PROVIDER: true
+  PREVIEW_LMS_BASE: "{{ EDXAPP_PREVIEW_LMS_BASE }}"
+  DISABLE_COURSE_CREATION: true
+
+# Configure remote SMTP server
+EDXAPP_EMAIL_HOST_USER: "info@millicent.in"
+EDXAPP_EMAIL_HOST_PASSWORD: "info@123"
+EDXAPP_EMAIL_HOST: "smtp.gmail.com"
+EDXAPP_EMAIL_PORT: 587
+EDXAPP_EMAIL_USE_TLS: true
+
+# Configure email addresses
+EDXAPP_CONTACT_EMAIL: "info@millicent.in"
+EDXAPP_TECH_SUPPORT_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+EDXAPP_BUGS_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+EDXAPP_DEFAULT_FROM_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+EDXAPP_DEFAULT_FEEDBACK_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+EDXAPP_DEFAULT_SERVER_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+EDXAPP_BULK_EMAIL_DEFAULT_FROM_EMAIL: "{{ EDXAPP_CONTACT_EMAIL }}"
+
+# Default log levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
+#EDXAPP_LOG_LEVEL: 'INFO'
