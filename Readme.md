@@ -1,6 +1,7 @@
 
+STILL IN TEST PHASE
 
-This template creates a single Ubuntu VM and deploys Open edX fullstack (Ficus) on it.
+This template creates a single Ubuntu VM and deploys Open edX (Hawthorn) on it.
 
 This Azure Resource Manager (ARM) template was created by a member of the community and not by Microsoft. Each ARM template is licensed to you under a licence agreement by its owner, not Microsoft. Microsoft is not responsible for ARM templates provided and licensed by community members and does not screen for security, compatibility or performance. Community ARM templates are not supported under any Microsoft support programme or service and are made available AS IS without warranty of any kind.
 Parameters
