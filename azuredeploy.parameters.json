@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "millicentr"
+      "value": "demoedxuser"
     },
     "adminPassword": {
-      "value": "init@123"
+      "value": "password"
     },
     "dnsLabelPrefix": {
       "value": "demo"
