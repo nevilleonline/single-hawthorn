@@ -4,7 +4,7 @@
   "parameters": {
     "adminUsername": {
       "type": "string",
-      "defaultValue": "millicentr",
+      "defaultValue": "openedxuser",
       "metadata": {
         "description": "Administrator username."
       }
