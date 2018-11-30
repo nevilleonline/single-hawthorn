@@ -73,7 +73,7 @@
   },
   "variables": {
     "openedxVersion": "open-release/hawthorn.2",
-    "scriptDownloadUri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/openedx-fullstack-ubuntu/",
+    "scriptDownloadUri": "https://raw.githubusercontent.com/nevilleonline/single-hawthorn/master/",
     "installScript": "install-openedx.sh",
     "installCommand": "[concat('bash -c ''nohup ./', variables('installScript'), ' ', variables('openedxVersion'), ' </dev/null &>/var/log/azure/openedx-install.log &''')]",
     "vmName": "demo",
