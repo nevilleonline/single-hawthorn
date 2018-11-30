@@ -14,13 +14,13 @@ location 		Location for all resources.
 Use the template
 PowerShell
 
-New-AzureRmResourceGroupDeployment -Name <deployment-name> -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/openedx-fullstack-ubuntu/azuredeploy.json
+New-AzureRmResourceGroupDeployment -Name <deployment-name> -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/nevilleonline/single-hawthorn/master/azuredeploy.json
 
 Install and configure Azure PowerShell
 Command line
 
 azure config mode arm
-azure group deployment create <my-resource-group> <my-deployment-name> --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/openedx-fullstack-ubuntu/azuredeploy.json
+azure group deployment create <my-resource-group> <my-deployment-name> --template-uri https://raw.githubusercontent.com/nevilleonline/single-hawthorn/master/azuredeploy.json
 
 
 Open edX Fullstack on Azure
