@@ -9,7 +9,7 @@
       "value": "password"
     },
     "dnsLabelPrefix": {
-      "value": "demo"
+      "value": "open-edx-azure-dns"
     },
     "vmSize" : {
       "value": "Standard_DS2_v2"
