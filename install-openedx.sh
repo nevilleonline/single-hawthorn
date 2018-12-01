@@ -40,8 +40,8 @@ install_ansible()
     # This URL structure works when $OPENEDX_RELEASE is a branch or tag in the configuration repo.
     wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/ansible-bootstrap.sh -O ansible-bootstrap.sh
     source ansible-bootstrap.sh
-	# Randomize passwords
-	wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/generate-passwords.sh -O generate-passwords.sh
+    # Randomize passwords
+    wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/generate-passwords.sh -O generate-passwords.sh
 }
 
 write_settings_to_file()
